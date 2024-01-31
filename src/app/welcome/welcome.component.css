@@ -1,0 +1,277 @@
+/* 
+---------------------------------------------
+welcome
+--------------------------------------------- 
+*/
+
+.welcome-area {
+    width: 100%;
+    height: 100vh;
+    min-height: 793px;
+    background-image: url("../../assets/images/banner-bg.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  
+  .welcome-area .header-text .left-text {
+    position: relative;
+    align-self: center;
+    margin-top: 35%;
+    transform: perspective(1px) translateY(-30%) !important;
+  }
+  
+  .welcome-area .header-text h1 {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #191a20;
+  }
+  
+  .welcome-area .header-text h1 em {
+    font-style: normal;
+    color: #fba70b;
+  }
+  
+  .welcome-area .header-text p {
+    font-weight: 300;
+    font-size: 17px;
+    color: #7a7a7a;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .trend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px; /* Añadir un espacio entre las columnas si lo deseas */
+    justify-items: center;
+    max-width: 1200px; /* Ajustar según tus necesidades */
+    margin: 0 auto; /* Centrar el contenedor si es necesario */
+}
+
+
+  .card {
+    width: 195px;
+    height: 285px;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    border: 4px solid #ff5956;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+    margin-top: 10%;
+    overflow: hidden;
+    cursor: hand;
+    padding: 10px;
+  }
+  .card p{
+    color: black;
+  }
+  
+  .img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    text-align: center;
+    margin-top: 30px;
+
+  }
+  
+  .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+    color: black;
+  }
+  .trendimg{
+    width: 50%;
+    border-radius: 50%;
+    margin-top: 100px;
+  }
+  
+  .textBox > .text {
+    font-weight: bold;
+  }
+  
+  .textBox > .head {
+    font-size: 20px;
+  }
+  
+  .textBox > .price {
+    font-size: 17px;
+  }
+  
+  .textBox > span {
+    font-size: 12px;
+    color: lightgrey;
+  }
+  
+  .card:hover > .textBox {
+    opacity: 1;
+  }
+  
+  .card:hover > .img {
+    height: 65%;
+    filter: blur(2px);
+    animation: anim 3s infinite;
+  }
+  .card:hover > .imgline {
+    
+    display: none;
+    
+  }
+  .car:hover .trendimg{
+    width: scale(1.2);
+  }
+  .imgline{
+    margin-top: 10px;
+    width: 90%;
+  }
+  
+  
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(-1deg);
+  }
+  
+  
+  @media (max-width: 1420px) {
+    .welcome-area .header-text {
+      width: 70%;
+      margin-left: 5%;
+    }
+  }
+  
+  @media (max-width: 1320px) {
+    .welcome-area .header-text .left-text {
+      margin-top: 50%;
+    }
+    .welcome-area .header-text {
+      width: 50%;
+      margin-left: 5%;
+    }
+  }
+  
+  @media (max-width: 1140px) {
+    .welcome-area {
+      height: auto;
+    }
+    .welcome-area .header-text {       
+      width: 92%;
+      padding-top: 793px;
+    }
+    .welcome-area .header-text .left-text {
+      margin-top: 5%;
+      transform: none !important;
+    }
+  }
+  @media (max-width: 810px) {
+    .welcome-area {
+      background-size: contain;
+    }
+  
+    .welcome-area .header-text {
+      padding-top: 100%;
+      margin-left: 0;
+    }
+      
+    .container-fluid .col-md-12 {
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  
+  .box-input {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .border {
+    background-image: linear-gradient(to right bottom, #e300ff, #ff00aa, #ff5956, #ffb900, #fffe00);
+    box-shadow: -25px -10px 30px -5px rgba(225, 0, 255, 0.5),
+      25px -10px 30px -5px rgba(255, 0, 212, 0.5),
+      25px 10px 30px -5px rgba(255, 174, 0, 0.5),
+      -25px 10px 30px -5px rgba(255, 230, 0, 0.5);
+    padding: 4px;
+  }
+  
+  .input {
+    background-color: #212121;
+    max-width: 250px;
+    height: 40px;
+    padding: 0 19px 0 10px;
+    font-size: 1.1em;
+    position: relative;
+    border: none;
+    color: white;
+    outline: 0;
+    overflow: hidden;
+  }
+  
+  .box-input::after,
+  .box-input::before {
+    content: "";
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .box-input::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .box-input::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .input::placeholder {
+    transition: all 0.5s ease-in, transform 0.2s ease-in 0.6s;
+  }
+  
+  .input:focus::placeholder {
+    padding-left: 165px;
+    transform: translateY(-50px);
+  }
+  

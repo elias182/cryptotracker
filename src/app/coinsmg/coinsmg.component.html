@@ -1,0 +1,20 @@
+<!-- coinsmg.component.html -->
+
+<div class="mgs" *ngIf="info && info.length > 0">
+  <h2>Listado de Monedas</h2>
+  <ul class="coin-list">
+    <li *ngFor="let documento of info; let i = index" class="coin-item">
+      <img src="{{ documento.image }}" alt="{{ documento.name }}" class="coin-image">
+      <div class="coin-details">
+        <strong>{{ documento.name }}</strong>
+        <p><strong>CoinID:</strong> {{ documento.coinid }}</p>
+        <p><strong>Fecha:</strong> {{ documento.fecha }}</p>
+        <button (click)="borrarMoneda(documento.coinid)">Borrar Moneda</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="mgs" *ngIf="info && info.length === 0">
+  <p>No hay monedas disponibles.</p>
+</div>

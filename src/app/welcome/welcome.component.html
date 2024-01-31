@@ -1,0 +1,50 @@
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+    <!-- ***** Header Text Start ***** -->
+    <div class="header-text">
+        <div class="container">
+            <div class="row">
+                <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <h1>Your Ultimate CryptoTracker App</h1>
+                    <p>Track and manage your cryptocurrency investments effortlessly with our intuitive app. Stay updated on market trends, portfolio performance, and make informed decisions.</p>
+                    <a  routerLink="Inicio" class="main-button-slider">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Header Text End ***** -->
+</div>
+
+
+<section class="container" class="trend">
+<div class="card" *ngFor="let item of trend.trendapi" >
+    <img  class="img" src="{{ item.item.large }}">
+    <p >{{item.item.symbol}}</p>
+    <img class="img" class="imgline" src="{{item.item.data.sparkline}}">
+    <div class="textBox">
+      <p class="text head" >{{ item.item.name }}</p>
+      
+      <p class="text price">{{ item.item.data.price }}</p>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="box-input">
+    <div class="border">
+      <input (keyup)="searchCoins(searchKeyword)" type="text" name="text" class="input" [(ngModel)]="searchKeyword" placeholder="Buscar monedas">
+    </div>
+  </div>
+
+
+
+
+<ul class="Search">
+  <li *ngFor="let item of coins">
+    <h3 (click)="muestradetail(item.id)">{{ item.name }}</h3>
+    <p class="simbol">{{item.symbol}}</p>
+</li>
+</ul>

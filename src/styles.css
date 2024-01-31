@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  background: #f1556a;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #f1556a;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+
+a.main-button-slider {
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 15px 25px;
+  background-color: #fba70b;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-button-slider:hover {
+  background-color: #f1556a;
+}
+
+a.main-button {
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 15px 25px;
+  background-color: #f4813f;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-button:hover {
+  background-color: #f1556a;
+}
+
+button.main-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 15px 25px;
+  background-color: #f4813f;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button.main-button:hover {
+  background-color: #f1556a;
+}
+
+
+.center-heading {
+  margin-bottom: 70px;
+}
+
+.center-heading h2 {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 25px;
+}
+
+.center-heading h2 em {
+  font-style: normal;
+  color: #f4813f;
+}
+
+.center-heading p {
+  font-size: 15px;
+  color: #888;
+  text-align: center;
+}
